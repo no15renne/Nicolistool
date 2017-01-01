@@ -1,0 +1,16 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# API
+GET     /api/v1/mylists             controllers.api.NicoMyListsAPIController.read
+GET     /api/v1/mylists/:id/items   controllers.api.NicoMyListItemsAPIController.read(id: Int)
+
+# View
+GET     /mylists                    controllers.view.NicoMyListsViewController.show
+GET     /mylists/:id/items          controllers.view.NicoMyListItemsViewController.show(id: Int)
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+

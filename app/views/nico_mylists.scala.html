@@ -1,0 +1,18 @@
+@import domain.entity.NicoMyList
+@(message: String, list: List[NicoMyList])
+@main("show scala templates") {
+
+<h1>@message</h1>
+<ul>
+    @for(mylist <- list) {
+    <li>
+        <a href="http://localhost:9000/mylists/@mylist.id/items">@mylist.name</a>
+        @if(mylist.public == "1"){
+            "public"
+        } else {
+            "private"
+        }
+    </li>
+    }
+</ul>
+}

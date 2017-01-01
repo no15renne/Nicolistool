@@ -1,0 +1,17 @@
+@import domain.entity.NicoVideo
+@(message: String, list: List[NicoVideo])
+@main("show scala templates") {
+
+<h1>@message</h1>
+@for(video <- list) {
+    <div class="video_lists">
+        <div class="video_thumbnail">
+            <img src="@video.thumbnail_url">
+        </div>
+        <div>
+            <a href="http://www.nicovideo.jp/watch/@video.video_id">@video.title</a>
+        </div>
+    </div>
+}
+
+}
