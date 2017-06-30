@@ -13,7 +13,7 @@ import domain.entity.{NicoVideo, NicoMyList}
 
 sealed class NicoAPIService {
   // TODO: userSessionはログイン叩くなりmylist叩くなりして取ってくる
-  val userSession: String = "user_session_63871305_7280f70e385853c8b94d679a2e102a49596efadef9d26be8129761ac967d7e5c"
+  val userSession: String = "user_session_63871305_8881e045ead53ba75453000b377abd8201c709aeea94656e619e245ed7883aaa"
 
   // TODO: Tを指定したgetの抽象化を追加
   def connect(urlStr: String) = {

@@ -12,4 +12,8 @@ class NicoMyListsViewController extends Controller {
     val myLists = Await.result(NicoAPIMyListsService.get(), Duration.Inf)
     Ok(views.html.nico_mylists("Nico MyLists Items!", myLists))
   }
+
+  def hoge = Action {
+    Ok(views.html.vuejs_test())
+  }
 }
