@@ -20,6 +20,6 @@ abstract class AbstractNicoMyListsAPIController extends Controller {
     implicit val writeFormats = Serialization.formats(NoTypeHints)
     for {
       myListGroups <- NicoAPIMyListsService.get()
-    } yield Ok(Serialization.write(myListGroups))
+    } yield Ok(Serialization.write(myListGroups)).withHeaders("Access-Control-Allow-Origin" -> " *")
   }
 }

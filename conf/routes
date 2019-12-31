@@ -5,6 +5,7 @@
 # API
 GET     /api/v1/mylists             controllers.api.NicoMyListsAPIController.read
 GET     /api/v1/mylists/:id/items   controllers.api.NicoMyListItemsAPIController.read(id: Int)
+GET     /api/v1/videos/:id/tags     controllers.api.NicoVideoAPIController.readTags(id: Int)
 
 # View
 GET     /mylists                    controllers.view.NicoMyListsViewController.show
